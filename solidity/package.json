@@ -1,0 +1,15 @@
+{
+  "name": "solidity-project",
+  "version": "1.0.0",
+  "main": "hardhat.config.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "hardhat": "^2.3.0"
+  }
+}

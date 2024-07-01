@@ -1,0 +1,21 @@
+{
+    "name": "Blockchain Dev Container",
+    "dockerFile": "../docker/Dockerfile",
+    "context": "..",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.formatOnSave": true,
+        "solidity.compileUsingRemoteVersion": "v0.8.0+commit.c7dfd78e",  // Latest stable version
+        "solidity.remappings": [
+            "@openzeppelin/="
+        ]
+    },
+    "extensions": [
+        "JuanBlanco.solidity",
+        "rust-lang.rust-analyzer",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+    ],
+    "postCreateCommand": "npm install",
+    "remoteUser": "root"
+}
