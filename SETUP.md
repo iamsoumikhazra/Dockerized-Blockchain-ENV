@@ -6,12 +6,15 @@ This project sets up a comprehensive blockchain development environment using Do
 
 1. **Build the Docker Image**:
     ```sh
-    docker build -t blockchain-dev ./docker
+   docker build -t blockchain-dev ./blockchain-dev
+
     ```
 
 2. **Run the Docker Container**:
+    #### change the path accordingly and use administrative option for not having any issue.
+    
     ```sh
-    docker run -it -p 8545:8545 -v $(pwd):/usr/src/app blockchain-dev
+    docker run -it -p 8545:8545 -v /c/Users/user_name/projects/blockchain-dev:/usr/src/app --name BlockChainDevelopmentEnvironment blockchain-dev
     ```
 
 3. **Open Project in VSCode**:
