@@ -15,8 +15,14 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 # Install Solidity compiler
 RUN npm install -g solc
 
+<<<<<<< HEAD
 # Install Hardhat, Ganache CLI, and Forge globally
 RUN npm install -g ganache hardhat
+=======
+# Install Hardhat, Ganache CLI, and the hardhat-ganache plugin globally
+RUN npm install -g ganache hardhat
+RUN npm install --save-dev @nomiclabs/hardhat-ganache
+>>>>>>> 73453503c634343ac1e02d9a55256e7c715863da
 
 # Install Foundry
 RUN curl -L https://foundry.paradigm.xyz | bash
@@ -33,4 +39,7 @@ EXPOSE 8545
 
 # Start Ganache CLI
 CMD ["ganache", "--host", "0.0.0.0"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73453503c634343ac1e02d9a55256e7c715863da
