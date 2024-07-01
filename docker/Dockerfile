@@ -15,8 +15,15 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 # Install Solidity compiler
 RUN npm install -g solc
 
-# Install Truffle, Ganache CLI, Hardhat, and OpenZeppelin globally
-RUN npm install -g truffle ganache-cli @openzeppelin/cli hardhat
+# Install Hardhat, Ganache CLI, and Forge globally
+RUN npm install -g ganache hardhat
+
+# Install Foundry
+RUN curl -L https://foundry.paradigm.xyz | bash
+RUN /root/.foundry/bin/foundryup
+
+# Add Foundry to PATH
+ENV PATH="/root/.foundry/bin:${PATH}"
 
 # Copy the current directory contents into the container
 COPY . .
@@ -25,4 +32,4 @@ COPY . .
 EXPOSE 8545
 
 # Start Ganache CLI
-CMD ["ganache-cli", "--host", "0.0.0.0"]
+CMD ["ganache", "--host", "0.0.0.0"]
